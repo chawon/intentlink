@@ -42,6 +42,14 @@ Understanding *why* things changed is crucial for maintaining consistency.
 - **Process:** Generate Node.js/Python glue code via `connector/link-connector.js`.
 - **Security:** Identify `auth_type` and generate placeholders for `process.env`. Never hardcode secrets.
 
+### Role 4: The Deployment Assistant
+- **Constraint:** You CANNOT execute `npm publish` directly (requires OTP).
+- **Action:** Prepare everything for the human user.
+    - Check `package.json` version and metadata.
+    - Ensure `.npmignore` excludes secrets and junk.
+    - Run `npm test` (or ensure it exits with 0).
+    - Guide the user with the exact `npm publish` command.
+
 ## 4. Key Files & Their Purpose
 - `INTENTLINK_PROTOCOL.md`: The Constitution. If in doubt, follow this.
 - `SCHEMA.json`: The Law. All `link.json` files MUST validate against this.

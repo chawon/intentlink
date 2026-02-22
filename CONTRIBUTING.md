@@ -15,6 +15,20 @@ We welcome contributions to the **IntentLink Protocol**! Whether you are a devel
 3. **Link Connector:** `node connector/link-connector.js examples/book-ship-proposal.json`
 4. **Link Validator:** `node validator/link-validator.js services/bookstore.json`
 
+## 🚀 Deployment Guide
+
+### 1. Publishing to NPM (CLI Tool)
+To release a new version of the `intentlink-cli`:
+1. **Commit Changes:** Ensure your git working directory is clean.
+2. **Bump Version:** Run `npm version patch` (or minor/major). This automatically updates `package.json` and creates a git tag.
+3. **Push:** `git push --follow-tags`
+4. **Publish:** Run `npm publish --access public` (Requires 2FA OTP).
+
+### 2. Releasing AI Skills
+To release a new version of the `link-extractor` skill:
+1. **Package:** Run `python3 scripts/package_skill_v2.py ./skills/link-extractor/link-extractor/ ./dist/link-extractor-vX.Y.Z.skill`.
+2. **GitHub Release:** Create a new release on GitHub and upload the generated `.skill` file.
+
 ## 🤝 How to Contribute
 1. **Fork** this repository.
 2. **Create** a new branch (`git checkout -b feature/AmazingFeature`).
