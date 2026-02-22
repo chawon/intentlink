@@ -1,4 +1,6 @@
 # IntentLink: The Active Web for AI Agents
+[![Korean](https://img.shields.io/badge/Language-Korean-blue)](./README_KR.md)
+
 > "Static Hyperlinks connect pages; IntentLink connects purposes via link.json."
 
 This project introduces a new paradigm for autonomous service discovery and integration in the age of AI agents. It moves beyond manual API plumbing toward a self-evolving web ecosystem.
