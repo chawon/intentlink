@@ -1,0 +1,25 @@
+{
+  "id": "complete-criminal-checks",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Complete Criminal Checks",
+    "purpose": "Provides data of offenders from all U.S. States and Pureto Rico"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://completecriminalchecks.com/Developers",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

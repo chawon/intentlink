@@ -1,0 +1,25 @@
+{
+  "id": "federal-register",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Federal Register",
+    "purpose": "The Daily Journal of the United States Government"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.federalregister.gov/reader-aids/developer-resources/rest-api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

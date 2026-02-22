@@ -1,0 +1,25 @@
+{
+  "id": "playwright",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Playwright",
+    "purpose": "Node.js library to automate Chromium, Firefox and WebKit with a single API."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/mxschmitt/awesome-playwright#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "apilayer-ipstack",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "apilayer ipstack",
+    "purpose": "Locate and identify website visitors by IP address"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://ipstack.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

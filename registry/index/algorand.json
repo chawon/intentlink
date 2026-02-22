@@ -1,0 +1,25 @@
+{
+  "id": "algorand",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Algorand",
+    "purpose": "An open-source, proof of stake blockchain and smart contract computing platform."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/aorumbayev/awesome-algorand#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

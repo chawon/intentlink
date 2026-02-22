@@ -1,0 +1,25 @@
+{
+  "id": "apilayer-mediastack",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "apilayer mediastack",
+    "purpose": "Free, Simple REST API for Live News & Blog Articles"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://mediastack.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

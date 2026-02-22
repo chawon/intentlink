@@ -1,0 +1,25 @@
+{
+  "id": "bng2latlong",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "bng2latlong",
+    "purpose": "Convert British OSGB36 easting and northing (British National Grid) to WGS84 latitude and longitude"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.getthedata.com/bng2latlong",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

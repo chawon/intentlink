@@ -1,0 +1,25 @@
+{
+  "id": "databricks",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Databricks",
+    "purpose": "Service to manage your databricks account,clusters, notebooks, jobs and workspaces"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.databricks.com/dev-tools/api/latest/index.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

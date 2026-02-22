@@ -1,0 +1,25 @@
+{
+  "id": "kelley-blue-book",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Kelley Blue Book",
+    "purpose": "Vehicle info, pricing, configuration, plus much more"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://developer.kbb.com/#!/data/1-Default",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

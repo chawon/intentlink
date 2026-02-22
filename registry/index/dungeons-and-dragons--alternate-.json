@@ -1,0 +1,25 @@
+{
+  "id": "dungeons-and-dragons--alternate-",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Dungeons and Dragons (Alternate)",
+    "purpose": "Includes all monsters and spells from the SRD (System Reference Document) as well as a search API"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://open5e.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

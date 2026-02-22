@@ -1,0 +1,25 @@
+{
+  "id": "ansible",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Ansible",
+    "purpose": "A Python-based, open-source IT configuration management and automation platform."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/ansible-community/awesome-ansible#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

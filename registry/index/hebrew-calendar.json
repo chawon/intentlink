@@ -1,0 +1,25 @@
+{
+  "id": "hebrew-calendar",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Hebrew Calendar",
+    "purpose": "Convert between Gregorian and Hebrew, fetch Shabbat and Holiday times, etc"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.hebcal.com/home/developer-apis",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "j2me",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "J2ME",
+    "purpose": "Java specification designed for old keypad phones and PDAs."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/hstsethi/awesome-j2me#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

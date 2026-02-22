@@ -1,0 +1,25 @@
+{
+  "id": "building-blocks-for-web-apps",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Building Blocks for Web Apps",
+    "purpose": "Standalone features to be integrated into web apps."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/componently-com/awesome-building-blocks-for-web-apps#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -11,13 +11,18 @@ const LinkHarvester = {
     const candidates = [];
     
     lines.forEach(line => {
-      const match = line.match(/-\s\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)\s+-\s+(.+)/);
-      if (match) {
-        candidates.push({
-          name: match[1],
-          url: match[2],
-          description: match[3].trim()
-        });
+      // 1. 리스트 패턴: (- 또는 *) [Name](URL) - Description
+      const listMatch = line.match(/[\-\*]\s+\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)\s*(?:-|:|–)\s*(.+)/);
+      if (listMatch) {
+        candidates.push({ name: listMatch[1], url: listMatch[2], description: listMatch[3].trim() });
+        return;
+      }
+
+      // 2. 테이블 패턴: | [Name](URL) | Description | ...
+      // 예: | [Cat Facts](url) | Daily cat facts | ...
+      const tableMatch = line.match(/\|\s*\[([^\]]+)\]\((https?:\/\/[^\s\)]+)\)\s*\|\s*([^\|]+)\s*\|/);
+      if (tableMatch) {
+        candidates.push({ name: tableMatch[1], url: tableMatch[2], description: tableMatch[3].trim() });
       }
     });
     return candidates;

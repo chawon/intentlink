@@ -1,0 +1,25 @@
+{
+  "id": "times-adder",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Times Adder",
+    "purpose": "With this API you can add each of the times introduced in the array sended"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/FranP-code/API-Times-Adder",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

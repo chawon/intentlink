@@ -1,0 +1,25 @@
+{
+  "id": "tredict",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Tredict",
+    "purpose": "Get and set activities, health data and more"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.tredict.com/blog/oauth_docs/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "petfinder",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Petfinder",
+    "purpose": "Petfinder is dedicated to helping pets find homes, another resource to get pets adopted"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.petfinder.com/developers/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "lecto-translation",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Lecto Translation",
+    "purpose": "Translation API with free tier and reasonable prices"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://rapidapi.com/lecto-lecto-default/api/lecto-translation/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

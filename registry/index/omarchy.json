@@ -1,0 +1,25 @@
+{
+  "id": "omarchy",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Omarchy",
+    "purpose": "Opinionated Arch Linux and Hyprland desktop environment from the creator of Ruby on Rails."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/aorumbayev/awesome-omarchy#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "geocod-io",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Geocod.io",
+    "purpose": "Address geocoding / reverse geocoding in bulk"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.geocod.io/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

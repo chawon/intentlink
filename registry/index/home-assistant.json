@@ -1,0 +1,25 @@
+{
+  "id": "home-assistant",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Home Assistant",
+    "purpose": "Open source home automation that puts local control and privacy first."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/frenck/awesome-home-assistant#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "newsx",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "NewsX",
+    "purpose": "Get or Search Latest Breaking News with ML Powered Summaries 🤖"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://rapidapi.com/machaao-inc-machaao-inc-default/api/newsx/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

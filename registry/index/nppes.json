@@ -1,0 +1,25 @@
+{
+  "id": "nppes",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "NPPES",
+    "purpose": "National Plan & Provider Enumeration System, info on healthcare providers registered in US"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://npiregistry.cms.hhs.gov/registry/help-api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

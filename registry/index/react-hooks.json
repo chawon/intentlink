@@ -1,0 +1,25 @@
+{
+  "id": "react-hooks",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "React Hooks",
+    "purpose": "Lets you use state and other React features without writing a class."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/glauberfc/awesome-react-hooks#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

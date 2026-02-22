@@ -1,0 +1,25 @@
+{
+  "id": "covid-19-jhu-csse",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Covid-19 JHU CSSE",
+    "purpose": "Open-source API for exploring Covid19 cases based on JHU CSSE"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://nuttaphat.com/covid19-api/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

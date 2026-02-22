@@ -1,0 +1,25 @@
+{
+  "id": "urban-observatory",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Urban Observatory",
+    "purpose": "The largest set of publicly available real time urban data in the UK"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://urbanobservatory.ac.uk",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "web-of-trust",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Web of Trust",
+    "purpose": "IP/domain/URL reputation"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://support.mywot.com/hc/en-us/sections/360004477734-API-",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

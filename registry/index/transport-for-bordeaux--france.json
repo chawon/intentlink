@@ -1,0 +1,25 @@
+{
+  "id": "transport-for-bordeaux--france",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Transport for Bordeaux, France",
+    "purpose": "Bordeaux Métropole public transport and more (France)"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://opendata.bordeaux-metropole.fr/explore/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

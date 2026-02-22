@@ -1,0 +1,25 @@
+{
+  "id": "musicbrainz",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "MusicBrainz",
+    "purpose": "Music"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://musicbrainz.org/doc/Development/XML_Web_Service/Version_2",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

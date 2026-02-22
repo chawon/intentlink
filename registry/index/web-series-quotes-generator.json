@@ -1,0 +1,25 @@
+{
+  "id": "web-series-quotes-generator",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Web Series Quotes Generator",
+    "purpose": "API generates various Web Series Quote Images"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/yogeshwaran01/web-series-quotes",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

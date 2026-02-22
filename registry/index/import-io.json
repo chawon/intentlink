@@ -1,0 +1,25 @@
+{
+  "id": "import-io",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "import.io",
+    "purpose": "Retrieve structured data from a website or RSS feed"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://api.docs.import.io/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "uk-carbon-intensity",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "UK Carbon Intensity",
+    "purpose": "The Official Carbon Intensity API for Great Britain developed by National Grid"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v1-0-0",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

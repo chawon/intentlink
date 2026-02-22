@@ -1,0 +1,25 @@
+{
+  "id": "bluetooth-low-energy",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Bluetooth Low Energy",
+    "purpose": "Low-power wireless communication protocol ideal for IoT, wearables, and other battery-powered applications."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/dotintent/awesome-ble#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

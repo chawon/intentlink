@@ -1,0 +1,25 @@
+{
+  "id": "world-bank",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "World Bank",
+    "purpose": "World Data"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://datahelpdesk.worldbank.org/knowledgebase/topics/125589",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "keycdn-ip-location-finder",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "keycdn IP Location Finder",
+    "purpose": "Get the IP geolocation data through the simple REST API. All the responses are JSON encoded"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://tools.keycdn.com/geo",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

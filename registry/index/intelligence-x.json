@@ -1,0 +1,25 @@
+{
+  "id": "intelligence-x",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Intelligence X",
+    "purpose": "Perform OSINT via Intelligence X"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/IntelligenceX/SDK/blob/master/Intelligence%20X%20API.pdf",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

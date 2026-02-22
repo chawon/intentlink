@@ -1,0 +1,25 @@
+{
+  "id": "postcodedata-nl",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "PostcodeData.nl",
+    "purpose": "Provide geolocation data based on postcode for Dutch addresses"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://api.postcodedata.nl/v1/postcode/?postcode=1211EP&streetnumber=60&ref=domeinnaam.nl&type=json",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

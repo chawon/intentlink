@@ -1,0 +1,25 @@
+{
+  "id": "aviationstack",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Aviationstack",
+    "purpose": "Free, real-time flight status and global Aviation data API"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://aviationstack.com/?utm_source=Github&utm_medium=Referral&utm_campaign=Public-apis-repo-Best-sellers",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

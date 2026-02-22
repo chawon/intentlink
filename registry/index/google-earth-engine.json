@@ -1,0 +1,25 @@
+{
+  "id": "google-earth-engine",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Google Earth Engine",
+    "purpose": "A cloud-based platform for planetary-scale environmental data analysis"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developers.google.com/earth-engine/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

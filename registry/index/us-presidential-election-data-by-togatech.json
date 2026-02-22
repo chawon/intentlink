@@ -1,0 +1,25 @@
+{
+  "id": "us-presidential-election-data-by-togatech",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "US Presidential Election Data by TogaTech",
+    "purpose": "Basic candidate data and live electoral vote counts for top two parties in US presidential election"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://uselection.togatech.org/api/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

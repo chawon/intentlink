@@ -1,0 +1,25 @@
+{
+  "id": "design-systems",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Design systems",
+    "purpose": "Collection of reusable components, guided by rules that ensure consistency and speed."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/klaufel/awesome-design-systems#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

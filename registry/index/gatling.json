@@ -1,0 +1,25 @@
+{
+  "id": "gatling",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Gatling",
+    "purpose": "Open-source load and performance testing framework based on Scala, Akka, and Netty."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/aliesbelik/awesome-gatling#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

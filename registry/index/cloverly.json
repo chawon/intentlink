@@ -1,0 +1,25 @@
+{
+  "id": "cloverly",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Cloverly",
+    "purpose": "API calculates the impact of common carbon-intensive activities in real time"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.cloverly.com/carbon-offset-documentation",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

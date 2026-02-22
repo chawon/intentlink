@@ -1,0 +1,25 @@
+{
+  "id": "vedic-society",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Vedic Society",
+    "purpose": "Descriptions of all nouns (names, places, animals, things) from vedic literature"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://aninditabasu.github.io/indica/html/vs.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

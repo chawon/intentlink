@@ -1,0 +1,25 @@
+{
+  "id": "airtel-ip",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Airtel IP",
+    "purpose": "IP Geolocation API. Collecting data from multiple sources"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://sys.airtel.lv/ip2country/1.1.1.1/?full=true",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

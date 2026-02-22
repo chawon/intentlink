@@ -1,0 +1,25 @@
+{
+  "id": "first-robotics-competition",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "FIRST Robotics Competition",
+    "purpose": "International high school robotics championship."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/andrewda/awesome-frc#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "bclaws",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "BCLaws",
+    "purpose": "Access to the laws of British Columbia"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.bclaws.gov.bc.ca/civix/template/complete/api/index.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

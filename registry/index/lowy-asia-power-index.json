@@ -1,0 +1,25 @@
+{
+  "id": "lowy-asia-power-index",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Lowy Asia Power Index",
+    "purpose": "Get measure resources and influence to rank the relative power of states in Asia"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/0x0is1/lowy-index-api-docs",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

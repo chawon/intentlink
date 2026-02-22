@@ -1,0 +1,25 @@
+{
+  "id": "google-safe-browsing",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Google Safe Browsing",
+    "purpose": "Google Link/Domain Flagging"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developers.google.com/safe-browsing/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

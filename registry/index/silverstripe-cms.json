@@ -1,0 +1,25 @@
+{
+  "id": "silverstripe-cms",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Silverstripe CMS",
+    "purpose": "PHP MVC framework that serves as a classic or headless CMS."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/wernerkrauss/awesome-silverstripe-cms#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

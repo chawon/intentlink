@@ -1,0 +1,25 @@
+{
+  "id": "threat-jammer",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Threat Jammer",
+    "purpose": "Risk scoring service from curated threat intelligence data"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://threatjammer.com/docs/index",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

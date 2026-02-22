@@ -1,0 +1,25 @@
+{
+  "id": "refuge-restrooms",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "REFUGE Restrooms",
+    "purpose": "Provides safe restroom access for transgender, intersex and gender nonconforming individuals"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.refugerestrooms.org/api/docs/#!/restrooms",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

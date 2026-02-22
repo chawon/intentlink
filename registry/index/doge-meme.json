@@ -1,0 +1,25 @@
+{
+  "id": "doge-meme",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Doge-Meme",
+    "purpose": "Top meme posts from r/dogecoin which include 'Meme' flair"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://api.doge-meme.lol/docs",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

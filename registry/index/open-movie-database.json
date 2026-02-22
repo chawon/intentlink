@@ -1,0 +1,25 @@
+{
+  "id": "open-movie-database",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Open Movie Database",
+    "purpose": "Movie information"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://www.omdbapi.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

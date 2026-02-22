@@ -1,0 +1,25 @@
+{
+  "id": "french-address-search",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "French Address Search",
+    "purpose": "Address search via the French Government"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://geo.api.gouv.fr/adresse",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

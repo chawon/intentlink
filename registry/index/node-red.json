@@ -1,0 +1,25 @@
+{
+  "id": "node-red",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Node-RED",
+    "purpose": "A programming tool for wiring together hardware devices, APIs, and online services."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/naimo84/awesome-nodered#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

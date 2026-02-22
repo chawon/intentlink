@@ -1,0 +1,25 @@
+{
+  "id": "material-ui",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Material-UI",
+    "purpose": "Material Design React components for faster and easier web development."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/nadunindunil/awesome-material-ui#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

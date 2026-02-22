@@ -1,0 +1,25 @@
+{
+  "id": "textpattern",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Textpattern",
+    "purpose": "Lightweight PHP-based CMS."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/drmonkeyninja/awesome-textpattern#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

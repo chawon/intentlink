@@ -1,0 +1,25 @@
+{
+  "id": "deutscher-bundestag-dip",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Deutscher Bundestag DIP",
+    "purpose": "This API provides read access to DIP entities (e.g. activities, persons, printed material)"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://dip.bundestag.de/documents/informationsblatt_zur_dip_api_v01.pdf",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

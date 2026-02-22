@@ -1,0 +1,25 @@
+{
+  "id": "uk-companies-house",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "UK Companies House",
+    "purpose": "UK Companies House Data from the UK government"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developer.company-information.service.gov.uk/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

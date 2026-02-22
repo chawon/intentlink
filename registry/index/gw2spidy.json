@@ -1,0 +1,25 @@
+{
+  "id": "gw2spidy",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "GW2Spidy",
+    "purpose": "GW2Spidy API, Items data on the Guild Wars 2 Trade Market"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/rubensayshi/gw2spidy/wiki",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

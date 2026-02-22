@@ -1,0 +1,25 @@
+{
+  "id": "question-answering",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Question Answering",
+    "purpose": "The science of asking and answering in natural language with a machine."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/seriousran/awesome-qa#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

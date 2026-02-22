@@ -1,0 +1,25 @@
+{
+  "id": "nordigen",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Nordigen",
+    "purpose": "Connect to bank accounts using official bank APIs and get raw transaction data"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://nordigen.com/en/account_information_documenation/integration/quickstart_guide/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

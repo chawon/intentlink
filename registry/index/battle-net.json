@@ -1,0 +1,25 @@
+{
+  "id": "battle-net",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Battle.net",
+    "purpose": "Diablo III, Hearthstone, StarCraft II and World of Warcraft game data APIs"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://develop.battle.net/documentation/guides/getting-started",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

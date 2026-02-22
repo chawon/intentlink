@@ -1,0 +1,25 @@
+{
+  "id": "yandex-maps-geocoder",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Yandex.Maps Geocoder",
+    "purpose": "Use geocoding to get an object's coordinates from its address"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://yandex.com/dev/maps/geocoder",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

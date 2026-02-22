@@ -1,0 +1,25 @@
+{
+  "id": "covid-19-india",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Covid-19 India",
+    "purpose": "Covid 19 statistics state and district wise about cases, vaccinations, recovery within India"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://data.covid19india.org/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

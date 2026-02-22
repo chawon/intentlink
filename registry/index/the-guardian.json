@@ -1,0 +1,25 @@
+{
+  "id": "the-guardian",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "The Guardian",
+    "purpose": "Access all the content the Guardian creates, categorised by tags and section"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://open-platform.theguardian.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

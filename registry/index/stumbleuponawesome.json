@@ -1,0 +1,25 @@
+{
+  "id": "stumbleuponawesome",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "StumbleUponAwesome",
+    "purpose": "Discover random pages from the Awesome dataset using a browser extension."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/basharovV/StumbleUponAwesome",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

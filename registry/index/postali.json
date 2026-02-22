@@ -1,0 +1,25 @@
+{
+  "id": "postali",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Postali",
+    "purpose": "Mexico Zip Codes API"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://postali.app/api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

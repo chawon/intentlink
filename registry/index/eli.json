@@ -1,0 +1,25 @@
+{
+  "id": "eli",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "ELI",
+    "purpose": "Natural Language Processing Tools for Thai Language"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://nlp.insightera.co.th/docs/v1.0",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

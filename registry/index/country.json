@@ -1,0 +1,25 @@
+{
+  "id": "country",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Country",
+    "purpose": "Get your visitor's country from their IP"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://country.is/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

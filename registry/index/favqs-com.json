@@ -1,0 +1,25 @@
+{
+  "id": "favqs-com",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "FavQs.com",
+    "purpose": "FavQs allows you to collect, discover and share your favorite quotes"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://favqs.com/api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

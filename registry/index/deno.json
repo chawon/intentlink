@@ -1,0 +1,25 @@
+{
+  "id": "deno",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Deno",
+    "purpose": "A secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/denolib/awesome-deno#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

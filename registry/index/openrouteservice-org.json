@@ -1,0 +1,25 @@
+{
+  "id": "openrouteservice-org",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "openrouteservice.org",
+    "purpose": "Directions, POIs, isochrones, geocoding (+reverse), elevation, and more"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://openrouteservice.org/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

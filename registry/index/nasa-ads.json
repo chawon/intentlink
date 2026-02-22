@@ -1,0 +1,25 @@
+{
+  "id": "nasa-ads",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "NASA ADS",
+    "purpose": "NASA Astrophysics Data System"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://ui.adsabs.harvard.edu/help/api/api-docs.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

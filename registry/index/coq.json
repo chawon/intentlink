@@ -1,0 +1,25 @@
+{
+  "id": "coq",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Coq",
+    "purpose": "Formal language and environment for programming and specification which facilitates interactive development of machine-checked proofs."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/coq-community/awesome-coq#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

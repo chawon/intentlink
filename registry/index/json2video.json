@@ -1,0 +1,25 @@
+{
+  "id": "json2video",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "JSON2Video",
+    "purpose": "Create and edit videos programmatically: watermarks,resizing,slideshows,voice-over,text animations"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://json2video.com",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

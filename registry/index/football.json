@@ -1,0 +1,25 @@
+{
+  "id": "football",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Football",
+    "purpose": "A simple Open Source Football API to get squads’ stats, best scorers and more"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://rapidapi.com/GiulianoCrescimbeni/api/football98/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

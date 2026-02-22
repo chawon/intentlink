@@ -1,0 +1,25 @@
+{
+  "id": "blogger",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Blogger",
+    "purpose": "The Blogger APIs allows client applications to view and update Blogger content"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developers.google.com/blogger/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

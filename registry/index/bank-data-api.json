@@ -1,0 +1,25 @@
+{
+  "id": "bank-data-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Bank Data API",
+    "purpose": "Instant IBAN and SWIFT number validation across the globe"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://apilayer.com/marketplace/bank_data-api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

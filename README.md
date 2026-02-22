@@ -45,17 +45,16 @@ intentlink run ./proposal.json
 # Output: Generating Node.js code... Executing bridge... Success!
 ```
 
-## 📦 Installation (AI Skill)
-For Gemini CLI users, or any agent supporting the `.skill` format:
-1. **Download:** Get the latest `.skill` file from [GitHub Releases](https://github.com/chawon/intentlink/releases/latest).
-2. **Install:** Run the following command in your terminal:
-   ```bash
-   gemini skills install ./path/to/link-extractor-v1.0.0.skill
-   ```
-3. **Activate:** Reload your skills:
-   ```bash
-   /skills reload
-   ```
+## 📦 Installation (AI Skills)
+Empower your agent with IntentLink capabilities.
+
+### 1. Link Extractor
+Parses web content into `link.json`.
+- [Download link-extractor-v1.0.1.skill](https://github.com/chawon/intentlink/releases/latest)
+
+### 2. IntentLink Broker
+Intelligent matching and connection proposals.
+- [Download intentlink-broker-v1.0.0.skill](https://github.com/chawon/intentlink/releases/latest)
 
 ## 🚀 Key Concepts
 1. **IntentLink Protocol:** A lightweight, intent-based framework centered around `link.json` that describes a service's *Purpose* and *Capabilities*.

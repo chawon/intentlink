@@ -1,0 +1,25 @@
+{
+  "id": "warface--non-official-",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Warface (non-official)",
+    "purpose": "Official API proxy with better data structure and more features"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://api.wfstats.cf",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

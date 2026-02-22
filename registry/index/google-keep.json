@@ -1,0 +1,25 @@
+{
+  "id": "google-keep",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Google Keep",
+    "purpose": "API to read, write, and format Google Keep notes"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developers.google.com/keep/api/reference/rest",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

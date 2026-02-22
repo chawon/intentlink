@@ -1,0 +1,25 @@
+{
+  "id": "kontests",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "KONTESTS",
+    "purpose": "For upcoming and ongoing competitive coding contests"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://kontests.net/api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

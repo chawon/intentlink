@@ -1,0 +1,25 @@
+{
+  "id": "joshua-project",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Joshua Project",
+    "purpose": "People groups of the world with the fewest followers of Christ"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://api.joshuaproject.net/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

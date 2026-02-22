@@ -1,0 +1,25 @@
+{
+  "id": "age-of-empires-ii",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Age of Empires II",
+    "purpose": "Get information about Age of Empires II resources"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://age-of-empires-2-api.herokuapp.com",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "trove",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Trove",
+    "purpose": "Search through the National Library of Australia collection of 1000s of digitised newspapers"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://trove.nla.gov.au/about/create-something/using-api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

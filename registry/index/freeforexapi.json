@@ -1,0 +1,25 @@
+{
+  "id": "freeforexapi",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "FreeForexAPI",
+    "purpose": "Real-time foreign exchange rates for major currency pairs"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://freeforexapi.com/Home/Api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

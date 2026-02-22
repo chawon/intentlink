@@ -1,0 +1,25 @@
+{
+  "id": "domain-driven-design",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Domain-Driven Design",
+    "purpose": "Software development approach for complex needs by connecting the implementation to an evolving model."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/heynickc/awesome-ddd#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

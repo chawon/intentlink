@@ -1,0 +1,25 @@
+{
+  "id": "humble-bundle",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Humble Bundle",
+    "purpose": "Humble Bundle's current bundles"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://rapidapi.com/Ziggoto/api/humble-bundle",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

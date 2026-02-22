@@ -1,0 +1,25 @@
+{
+  "id": "gmail",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Gmail",
+    "purpose": "Flexible, RESTful access to the user's inbox"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developers.google.com/gmail/api/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

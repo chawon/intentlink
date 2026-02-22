@@ -1,0 +1,25 @@
+{
+  "id": "firebase",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Firebase",
+    "purpose": "App development platform built on Google Cloud."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/jthegedus/awesome-firebase#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "the-null-pointer",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "The Null Pointer",
+    "purpose": "No-bullshit file hosting and URL shortening service"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://0x0.st",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

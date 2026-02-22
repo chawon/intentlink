@@ -1,0 +1,25 @@
+{
+  "id": "linkedin",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "LinkedIn",
+    "purpose": "The foundation of all digital integrations with LinkedIn"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.microsoft.com/en-us/linkedin/?context=linkedin/context",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "clico",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Clico",
+    "purpose": "URL shortener service"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://cli.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

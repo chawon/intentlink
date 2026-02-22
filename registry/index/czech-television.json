@@ -1,0 +1,25 @@
+{
+  "id": "czech-television",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Czech Television",
+    "purpose": "TV programme of Czech TV"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://www.ceskatelevize.cz/xml/tv-program/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "heroku",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Heroku",
+    "purpose": "REST API to programmatically create apps, provision add-ons and perform other task on Heroku"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://devcenter.heroku.com/articles/platform-api-reference/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

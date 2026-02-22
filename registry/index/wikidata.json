@@ -1,0 +1,25 @@
+{
+  "id": "wikidata",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Wikidata",
+    "purpose": "Collaboratively edited knowledge base operated by the Wikimedia Foundation"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.wikidata.org/w/api.php?action=help",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "aztro",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "aztro",
+    "purpose": "Daily horoscope info for yesterday, today, and tomorrow"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://aztro.sameerkumar.website/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

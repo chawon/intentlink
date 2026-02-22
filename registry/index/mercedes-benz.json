@@ -1,0 +1,25 @@
+{
+  "id": "mercedes-benz",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Mercedes-Benz",
+    "purpose": "Telematics data, remotely access vehicle functions, car configurator, locate service dealers"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developer.mercedes-benz.com/apis",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

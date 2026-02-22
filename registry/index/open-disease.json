@@ -1,0 +1,25 @@
+{
+  "id": "open-disease",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Open Disease",
+    "purpose": "API for Current cases and more stuff about COVID-19 and Influenza"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://disease.sh/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

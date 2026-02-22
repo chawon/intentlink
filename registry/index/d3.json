@@ -1,0 +1,25 @@
+{
+  "id": "d3",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "D3",
+    "purpose": "Library for producing dynamic, interactive data visualizations."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/wbkd/awesome-d3#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

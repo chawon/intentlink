@@ -1,0 +1,25 @@
+{
+  "id": "zipcodeapi",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "ZipCodeAPI",
+    "purpose": "US zip code distance, radius and location API"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.zipcodeapi.com",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

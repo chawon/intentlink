@@ -1,0 +1,25 @@
+{
+  "id": "jira",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "JIRA",
+    "purpose": "JIRA is a proprietary issue tracking product that allows bug tracking and agile project management"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://developer.atlassian.com/server/jira/platform/rest-apis/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

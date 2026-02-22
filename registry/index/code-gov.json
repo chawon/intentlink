@@ -1,0 +1,25 @@
+{
+  "id": "code-gov",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Code.gov",
+    "purpose": "The primary platform for Open Source and code sharing for the U.S. Federal Government"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://code.gov",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

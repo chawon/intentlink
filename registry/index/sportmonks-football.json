@@ -1,0 +1,25 @@
+{
+  "id": "sportmonks-football",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Sportmonks Football",
+    "purpose": "Football score/schedule, news api, tv channels, stats, history, display standing e.g. epl, la liga"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.sportmonks.com/football/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

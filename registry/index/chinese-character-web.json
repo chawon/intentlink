@@ -1,0 +1,25 @@
+{
+  "id": "chinese-character-web",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Chinese Character Web",
+    "purpose": "Chinese character definitions and pronunciations"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://ccdb.hemiola.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "7digital",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "7digital",
+    "purpose": "Api of Music store 7digital"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.7digital.com/reference",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

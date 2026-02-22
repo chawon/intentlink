@@ -1,0 +1,25 @@
+{
+  "id": "waves",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Waves",
+    "purpose": "Open source blockchain platform and development toolset for Web 3.0 apps and decentralized solutions."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/msmolyakov/awesome-waves#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

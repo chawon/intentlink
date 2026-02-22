@@ -1,0 +1,25 @@
+{
+  "id": "data-parliament-uk",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Data.parliament.uk",
+    "purpose": "Contains live datasets including information about petitions, bills, MP votes, attendance and more"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://explore.data.parliament.uk/?learnmore=Members",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "core",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "CORE",
+    "purpose": "Access the world's Open Access research papers"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://core.ac.uk/services#api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

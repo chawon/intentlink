@@ -1,0 +1,25 @@
+{
+  "id": "mercadopago",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "MercadoPago",
+    "purpose": "Mercado Pago API reference - all the information you need to develop your integrations"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.mercadopago.com.br/developers/es/reference",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

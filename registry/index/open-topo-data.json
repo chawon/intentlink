@@ -1,0 +1,25 @@
+{
+  "id": "open-topo-data",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Open Topo Data",
+    "purpose": "Elevation and ocean depth for a latitude and longitude"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.opentopodata.org",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

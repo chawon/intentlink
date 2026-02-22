@@ -1,0 +1,25 @@
+{
+  "id": "dota-2",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Dota 2",
+    "purpose": "Provides information about Player stats , Match stats, Rankings for Dota 2"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.opendota.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

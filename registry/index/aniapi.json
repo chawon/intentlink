@@ -1,0 +1,25 @@
+{
+  "id": "aniapi",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "AniAPI",
+    "purpose": "Anime discovery, streaming & syncing with trackers"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://aniapi.com/docs/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

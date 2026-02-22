@@ -1,0 +1,25 @@
+{
+  "id": "azure-devops-health",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Azure DevOps Health",
+    "purpose": "Resource health helps you diagnose and get support when an Azure issue impacts your resources"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://docs.microsoft.com/en-us/rest/api/resourcehealth",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

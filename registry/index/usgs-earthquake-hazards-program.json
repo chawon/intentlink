@@ -1,0 +1,25 @@
+{
+  "id": "usgs-earthquake-hazards-program",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "USGS Earthquake Hazards Program",
+    "purpose": "Earthquakes data real-time"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://earthquake.usgs.gov/fdsnws/event/1/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "bitcoinaverage",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "BitcoinAverage",
+    "purpose": "Digital Asset Price Data for the blockchain industry"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://apiv2.bitcoinaverage.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

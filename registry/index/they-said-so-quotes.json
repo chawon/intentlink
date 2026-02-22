@@ -1,0 +1,25 @@
+{
+  "id": "they-said-so-quotes",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "They Said So Quotes",
+    "purpose": "Quotes Trusted by many fortune brands around the world"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://theysaidso.com/api/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

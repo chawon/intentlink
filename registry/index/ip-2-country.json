@@ -1,0 +1,25 @@
+{
+  "id": "ip-2-country",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "IP 2 Country",
+    "purpose": "Map an IP to a country"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://ip2country.info",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

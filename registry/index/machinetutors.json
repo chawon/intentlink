@@ -1,0 +1,25 @@
+{
+  "id": "machinetutors",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Machinetutors",
+    "purpose": "AI Solutions: Video/Image Classification & Tagging, NSFW, Icon/Image/Audio Search, NLP"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.machinetutors.com/portfolio/MT_api.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

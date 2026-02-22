@@ -1,0 +1,25 @@
+{
+  "id": "dataflow-kit-covid-19",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Dataflow Kit COVID-19",
+    "purpose": "COVID-19 live statistics into sites per hour"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://covid-19.dataflowkit.com",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

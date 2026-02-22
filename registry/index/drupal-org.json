@@ -1,0 +1,25 @@
+{
+  "id": "drupal-org",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Drupal.org",
+    "purpose": "Drupal.org"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://www.drupal.org/drupalorg/docs/api",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

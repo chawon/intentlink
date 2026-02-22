@@ -1,0 +1,25 @@
+{
+  "id": "geonames",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "GeoNames",
+    "purpose": "Place names and other geographical data"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://www.geonames.org/export/web-services.html",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

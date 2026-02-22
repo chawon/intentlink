@@ -1,0 +1,25 @@
+{
+  "id": "socrata",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Socrata",
+    "purpose": "Access to Open Data from Governments, Non-profits and NGOs around the world"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://dev.socrata.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

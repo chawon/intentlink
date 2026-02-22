@@ -1,0 +1,25 @@
+{
+  "id": "what-s-on-the-menu-",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "What's on the menu?",
+    "purpose": "NYPL human-transcribed historical menu collection"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: http://nypl.github.io/menus-api/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

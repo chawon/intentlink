@@ -1,0 +1,25 @@
+{
+  "id": "website-carbon",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Website Carbon",
+    "purpose": "API to estimate the carbon footprint of loading web pages"
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://api.websitecarbon.com/",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}

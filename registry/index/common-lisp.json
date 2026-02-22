@@ -1,0 +1,25 @@
+{
+  "id": "common-lisp",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Common Lisp",
+    "purpose": "Powerful dynamic multiparadigm language that facilitates iterative and interactive development."
+  },
+  "offers": [
+    {
+      "intent": "use_api",
+      "description": "가상의 기본 엔드포인트: https://github.com/CodyReichert/awesome-cl#readme",
+      "endpoint": "/",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.5
+    }
+  ],
+  "needs": [
+    {
+      "intent": "identity.api_key",
+      "criticality": "required"
+    }
+  ]
+}
