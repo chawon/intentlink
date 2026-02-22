@@ -1,0 +1,26 @@
+{
+  "name": "intentlink",
+  "version": "1.0.0",
+  "description": "The Autonomous Web Protocol CLI",
+  "main": "bin/intentlink.js",
+  "bin": {
+    "intentlink": "./bin/intentlink.js"
+  },
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "chalk": "^4.1.2",
+    "axios": "^1.6.0"
+  },
+  "keywords": [
+    "autonomous",
+    "web",
+    "protocol",
+    "ai",
+    "agent"
+  ],
+  "author": "IntentLink Team",
+  "license": "MIT"
+}

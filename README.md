@@ -3,6 +3,19 @@
 
 This project introduces a new paradigm for autonomous service discovery and integration in the age of AI agents. It moves beyond manual API plumbing toward a self-evolving web ecosystem.
 
+## 📦 Installation (Link Extractor Skill)
+Give your Gemini CLI the power to extract intents from any web service.
+
+1. **Download:** Get the latest `.skill` file from [GitHub Releases](https://github.com/chawon/intentlink/releases/latest).
+2. **Install:** Run the following command in your terminal:
+   ```bash
+   gemini skills install ./path/to/link-extractor-v1.0.0.skill
+   ```
+3. **Activate:** Reload your skills:
+   ```bash
+   /skills reload
+   ```
+
 ## 🚀 Key Concepts
 1. **IntentLink Protocol:** A lightweight, intent-based framework centered around `link.json` that describes a service's *Purpose* and *Capabilities*.
 2. **IntentLink Extractor (Skill):** A specialized AI skill that analyzes legacy web documentation and automatically generates `link.json` "Digital Twins."

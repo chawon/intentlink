@@ -1,0 +1,23 @@
+{
+  "name": "intentlink-skill-extractor",
+  "version": "1.0.0",
+  "description": "AI Skill for extracting IntentLink manifests (link.json) from web documentation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo "Error: no test specified" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "skill",
+    "intentlink",
+    "protocol"
+  ],
+  "author": "IntentLink Team",
+  "license": "MIT",
+  "files": [
+    "link-extractor/",
+    "index.js",
+    "SKILL.md"
+  ]
+}
