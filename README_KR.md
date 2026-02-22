@@ -40,6 +40,7 @@ intentlink run ./proposal.json
 
 ## 📚 표준 문서 (Standards)
 - **[INTENTLINK_PROTOCOL.md](./INTENTLINK_PROTOCOL.md):** 프로토콜 정의서 (영문)
+- **[WHITE_PAPER_KR.md](./WHITE_PAPER_KR.md):** IntentLink 선언문 및 철학 (한글)
 - **[ARCHITECTURE_KR.md](./ARCHITECTURE_KR.md):** 시스템 아키텍처 설명 (한글)
 - **[SCHEMA.json](./SCHEMA.json):** 데이터 검증을 위한 JSON 스키마
 
