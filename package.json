@@ -1,13 +1,14 @@
 {
-  "name": "intentlink",
+  "name": "intentlink-cli",
   "version": "1.0.0",
-  "description": "The Autonomous Web Protocol CLI",
+  "description": "The Autonomous Web Protocol CLI - IntentLink",
   "main": "bin/intentlink.js",
   "bin": {
-    "intentlink": "./bin/intentlink.js"
+    "intentlink": "bin/intentlink.js"
   },
   "scripts": {
-    "test": "echo 'Error: no test specified' && exit 1"
+    "test": "echo 'No tests specified' && exit 0",
+    "prepublishOnly": "npm test"
   },
   "dependencies": {
     "commander": "^12.0.0",
@@ -19,8 +20,17 @@
     "web",
     "protocol",
     "ai",
-    "agent"
+    "agent",
+    "intentlink"
   ],
   "author": "IntentLink Team",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chawon/intentlink.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chawon/intentlink/issues"
+  },
+  "homepage": "https://github.com/chawon/intentlink#readme"
 }

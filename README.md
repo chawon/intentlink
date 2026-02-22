@@ -3,9 +3,21 @@
 
 This project introduces a new paradigm for autonomous service discovery and integration in the age of AI agents. It moves beyond manual API plumbing toward a self-evolving web ecosystem.
 
-## 📦 Installation (Link Extractor Skill)
-Give your Gemini CLI the power to extract intents from any web service.
+## 🤖 Universal Compatibility
+IntentLink is designed to be **Agent-Agnostic**.
+- **Protocols:** Works with any LLM capable of understanding JSON schemas (GPT-4, Claude 3, Gemini 1.5).
+- **Skills:** The `link-extractor` skill follows a standard markdown structure usable by OpenClaw, LangChain, and AutoGPT.
+- **CLI:** The `intentlink` CLI is a standalone Node.js tool that integrates with any agent's tool execution environment.
 
+## 📦 Installation (CLI Tool)
+Install the universal CLI tool to manage the autonomous web from your terminal.
+```bash
+npm install -g intentlink-cli
+```
+Run `intentlink --help` to get started.
+
+## 📦 Installation (AI Skill)
+For Gemini CLI users, or any agent supporting the `.skill` format:
 1. **Download:** Get the latest `.skill` file from [GitHub Releases](https://github.com/chawon/intentlink/releases/latest).
 2. **Install:** Run the following command in your terminal:
    ```bash
