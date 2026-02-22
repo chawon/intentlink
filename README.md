@@ -70,6 +70,7 @@ For Gemini CLI users, or any agent supporting the `.skill` format:
 - **[PLANNED] v0.9: IntentLink Observer & Multi-Modal** - Support for `ui-web`, `deep-link`, and real-time health monitoring.
 
 ## 📚 Standards & Best Practices
+- **[ARCHITECTURE.md](./ARCHITECTURE.md):** System overview and component map.
 - **[INTENTLINK_PROTOCOL.md](./INTENTLINK_PROTOCOL.md):** The core definition.
 - **[SCHEMA.json](./SCHEMA.json):** The formal JSON Schema.
 - **[BEST_PRACTICES.md](./BEST_PRACTICES.md):** Guidelines for discovery and security.
