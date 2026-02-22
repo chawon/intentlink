@@ -1,0 +1,27 @@
+{
+  "id": "discord-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Discord",
+    "purpose": "음성, 영상, 텍스트 커뮤니케이션 서비스"
+  },
+  "offers": [
+    {
+      "intent": "communication.voice",
+      "description": "Discord의 communication.voice 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "communication.chat",
+      "description": "Discord의 communication.chat 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

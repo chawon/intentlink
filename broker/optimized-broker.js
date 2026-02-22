@@ -1,11 +1,31 @@
 const fs = require('fs');
 const path = require('path');
 
+// 이제 Public Catalog를 메인 소스로 사용합니다.
+const CATALOG_PATH = path.join(__dirname, '../registry/public/catalog.json');
+
 const OptimizedBroker = {
+  // 1. 데이터 소스 로드 (Catalog)
+  loadManifests: () => {
+    if (fs.existsSync(CATALOG_PATH)) {
+      // 카탈로그에는 요약 정보만 있으므로, 실제 검색 시에는 전체 파일을 읽거나 요약본으로 1차 필터링을 해야 함.
+      // 여기서는 성능을 위해, 로컬에 있는 원본 파일들을 직접 읽습니다.
+      const publicDir = path.join(__dirname, '../registry/public');
+      return fs.readdirSync(publicDir)
+        .filter(f => f.endsWith('.json') && f !== 'catalog.json')
+        .map(f => JSON.parse(fs.readFileSync(path.join(publicDir, f), 'utf8')));
+    }
+    return [];
+  },
+
   vectorSearch: (query, manifests) => {
-    console.log(`\n⚡ [Optimized Broker] 1단계: 고속 매칭 검색 중...`);
+    // manifests가 없으면 로드
+    const targets = manifests || OptimizedBroker.loadManifests();
+    
+    console.log(`\n⚡ [Optimized Broker v0.9] ${targets.length}개 서비스 중 고속 검색...`);
     const q = query.toLowerCase();
-    return manifests.map(m => {
+    
+    return targets.map(m => {
       let score = 0;
       const text = (m.identity.name + " " + m.identity.purpose + " " + (m.offers ? m.offers.map(o => o.intent).join(" ") : "")).toLowerCase();
       
@@ -22,7 +42,7 @@ const OptimizedBroker = {
   },
 
   rankResults: (candidates, userNeeds) => {
-    console.log(`🛡️  [Optimized Broker] 2단계: 정밀 랭킹 및 신뢰도 분석 중...`);
+    console.log(`🛡️  [Optimized Broker] 정밀 랭킹 및 신뢰도 분석...`);
     
     return candidates.map(c => {
       const m = c.manifest;

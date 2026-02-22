@@ -1,0 +1,27 @@
+{
+  "id": "stripe-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Stripe",
+    "purpose": "인터넷 비즈니스를 위한 온라인 결제 처리 인프라"
+  },
+  "offers": [
+    {
+      "intent": "finance.payment",
+      "description": "Stripe의 finance.payment 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "finance.subscription",
+      "description": "Stripe의 finance.subscription 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

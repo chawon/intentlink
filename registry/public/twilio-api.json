@@ -1,0 +1,27 @@
+{
+  "id": "twilio-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Twilio",
+    "purpose": "SMS, 음성, 영상 통화를 위한 클라우드 통신 API"
+  },
+  "offers": [
+    {
+      "intent": "communication.sms",
+      "description": "Twilio의 communication.sms 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "communication.call",
+      "description": "Twilio의 communication.call 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

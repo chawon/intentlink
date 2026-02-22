@@ -1,0 +1,27 @@
+{
+  "id": "google-maps",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Google Maps Platform",
+    "purpose": "지도, 경로, 장소 정보를 제공하는 위치 기반 서비스"
+  },
+  "offers": [
+    {
+      "intent": "location.map",
+      "description": "Google Maps Platform의 location.map 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "location.route",
+      "description": "Google Maps Platform의 location.route 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

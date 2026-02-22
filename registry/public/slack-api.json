@@ -1,0 +1,27 @@
+{
+  "id": "slack-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Slack",
+    "purpose": "팀 협업 및 커뮤니케이션을 위한 메신저 플랫폼"
+  },
+  "offers": [
+    {
+      "intent": "communication.message",
+      "description": "Slack의 communication.message 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "communication.channel",
+      "description": "Slack의 communication.channel 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

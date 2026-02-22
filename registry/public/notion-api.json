@@ -1,0 +1,27 @@
+{
+  "id": "notion-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "Notion",
+    "purpose": "노트, 문서, 프로젝트 관리를 위한 올인원 워크스페이스"
+  },
+  "offers": [
+    {
+      "intent": "productivity.document",
+      "description": "Notion의 productivity.document 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "productivity.database",
+      "description": "Notion의 productivity.database 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

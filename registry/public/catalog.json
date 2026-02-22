@@ -1,0 +1,92 @@
+[
+  {
+    "id": "cat-facts",
+    "name": "Cat Facts",
+    "purpose": "Daily cat facts",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/cat-facts.json"
+  },
+  {
+    "id": "discord-api",
+    "name": "Discord",
+    "purpose": "음성, 영상, 텍스트 커뮤니케이션 서비스",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/discord-api.json"
+  },
+  {
+    "id": "dog-api",
+    "name": "Dog API",
+    "purpose": "Access to images of dogs",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/dog-api.json"
+  },
+  {
+    "id": "flash-ship",
+    "name": "번개 배송 주식회사",
+    "purpose": "당일 배송 및 국제 물류 서비스를 제공합니다.",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/flash-ship.json"
+  },
+  {
+    "id": "github-api",
+    "name": "GitHub Platform",
+    "purpose": "전 세계 소스 코드 호스팅 및 협업 개발 환경을 제공합니다.",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/github-api.json"
+  },
+  {
+    "id": "global-books",
+    "name": "글로벌 북스토어",
+    "purpose": "희귀 도서를 전 세계에 판매합니다.",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/global-books.json"
+  },
+  {
+    "id": "google-maps",
+    "name": "Google Maps Platform",
+    "purpose": "지도, 경로, 장소 정보를 제공하는 위치 기반 서비스",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/google-maps.json"
+  },
+  {
+    "id": "notion-api",
+    "name": "Notion",
+    "purpose": "노트, 문서, 프로젝트 관리를 위한 올인원 워크스페이스",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/notion-api.json"
+  },
+  {
+    "id": "openai-api",
+    "name": "OpenAI",
+    "purpose": "GPT 모델을 활용한 자연어 처리 및 이미지 생성 AI",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/openai-api.json"
+  },
+  {
+    "id": "openweather-api",
+    "name": "OpenWeather 기상 플랫폼",
+    "purpose": "전 세계 실시간 기상 데이터와 정밀한 예보를 제공합니다.",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/openweather-api.json"
+  },
+  {
+    "id": "openweather",
+    "name": "OpenWeather",
+    "purpose": "Weather forecasting services",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/openweather.json"
+  },
+  {
+    "id": "sendgrid-api",
+    "name": "SendGrid",
+    "purpose": "이메일 마케팅 및 트랜잭션 이메일 발송 서비스",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/sendgrid-api.json"
+  },
+  {
+    "id": "slack-api",
+    "name": "Slack",
+    "purpose": "팀 협업 및 커뮤니케이션을 위한 메신저 플랫폼",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/slack-api.json"
+  },
+  {
+    "id": "stripe-api",
+    "name": "Stripe",
+    "purpose": "인터넷 비즈니스를 위한 온라인 결제 처리 인프라",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/stripe-api.json"
+  },
+  {
+    "id": "twilio-api",
+    "name": "Twilio",
+    "purpose": "SMS, 음성, 영상 통화를 위한 클라우드 통신 API",
+    "url": "https://raw.githubusercontent.com/chawon/intentlink/main/registry/public/twilio-api.json"
+  }
+]

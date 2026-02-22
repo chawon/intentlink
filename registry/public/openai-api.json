@@ -1,0 +1,27 @@
+{
+  "id": "openai-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "OpenAI",
+    "purpose": "GPT 모델을 활용한 자연어 처리 및 이미지 생성 AI"
+  },
+  "offers": [
+    {
+      "intent": "ai.text_generation",
+      "description": "OpenAI의 ai.text_generation 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    },
+    {
+      "intent": "ai.image_generation",
+      "description": "OpenAI의 ai.image_generation 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}

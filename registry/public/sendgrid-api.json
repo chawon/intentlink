@@ -1,0 +1,19 @@
+{
+  "id": "sendgrid-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "SendGrid",
+    "purpose": "이메일 마케팅 및 트랜잭션 이메일 발송 서비스"
+  },
+  "offers": [
+    {
+      "intent": "communication.email",
+      "description": "SendGrid의 communication.email 기능",
+      "endpoint": "https://api.example.com/v1",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer"
+    }
+  ],
+  "needs": []
+}
