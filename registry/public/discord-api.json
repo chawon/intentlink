@@ -2,26 +2,30 @@
   "id": "discord-api",
   "protocol_version": "0.2.0",
   "identity": {
-    "name": "Discord",
-    "purpose": "음성, 영상, 텍스트 커뮤니케이션 서비스"
+    "name": "Discord API",
+    "purpose": "게이머와 커뮤니티를 위한 음성, 영상, 텍스트 채팅 플랫폼입니다."
   },
   "offers": [
     {
-      "intent": "communication.voice",
-      "description": "Discord의 communication.voice 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "communication.message.send",
+      "description": "채널에 메시지를 전송합니다.",
+      "endpoint": "https://discord.com/api/v10/channels/{channel_id}/messages",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.98
     },
     {
-      "intent": "communication.chat",
-      "description": "Discord의 communication.chat 기능",
-      "endpoint": "https://api.example.com/v1",
-      "method": "POST",
-      "side_effect": "state-change",
-      "auth_type": "bearer"
+      "intent": "communication.channel.get",
+      "description": "채널 정보를 조회합니다.",
+      "endpoint": "https://discord.com/api/v10/channels/{channel_id}",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "bearer",
+      "confidence_score": 0.95
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "identity.bot_token", "criticality": "required" }
+  ]
 }

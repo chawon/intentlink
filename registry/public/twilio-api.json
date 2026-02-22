@@ -2,26 +2,30 @@
   "id": "twilio-api",
   "protocol_version": "0.2.0",
   "identity": {
-    "name": "Twilio",
-    "purpose": "SMS, 음성, 영상 통화를 위한 클라우드 통신 API"
+    "name": "Twilio API",
+    "purpose": "SMS, 음성, 영상 통화 기능을 애플리케이션에 통합하는 클라우드 통신 플랫폼입니다."
   },
   "offers": [
     {
-      "intent": "communication.sms",
-      "description": "Twilio의 communication.sms 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "communication.sms.send",
+      "description": "프로그래밍 방식으로 SMS 메시지를 전송합니다.",
+      "endpoint": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "basic",
+      "confidence_score": 0.98
     },
     {
-      "intent": "communication.call",
-      "description": "Twilio의 communication.call 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "communication.call.make",
+      "description": "음성 통화를 발신합니다.",
+      "endpoint": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Calls.json",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "basic",
+      "confidence_score": 0.95
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "finance.billing", "criticality": "required" }
+  ]
 }

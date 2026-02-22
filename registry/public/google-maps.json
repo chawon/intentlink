@@ -3,25 +3,38 @@
   "protocol_version": "0.2.0",
   "identity": {
     "name": "Google Maps Platform",
-    "purpose": "지도, 경로, 장소 정보를 제공하는 위치 기반 서비스"
+    "purpose": "지도, 경로, 장소 정보 및 지오코딩 기능을 제공하는 위치 기반 서비스입니다."
   },
   "offers": [
     {
-      "intent": "location.map",
-      "description": "Google Maps Platform의 location.map 기능",
-      "endpoint": "https://api.example.com/v1",
-      "method": "POST",
-      "side_effect": "state-change",
-      "auth_type": "bearer"
+      "intent": "location.place.search",
+      "description": "텍스트 검색을 통해 장소 정보를 찾습니다.",
+      "endpoint": "https://maps.googleapis.com/maps/api/place/findplacefromtext/json",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.98
     },
     {
-      "intent": "location.route",
-      "description": "Google Maps Platform의 location.route 기능",
-      "endpoint": "https://api.example.com/v1",
-      "method": "POST",
-      "side_effect": "state-change",
-      "auth_type": "bearer"
+      "intent": "location.route.calculate",
+      "description": "두 지점 간의 경로와 이동 시간을 계산합니다.",
+      "endpoint": "https://maps.googleapis.com/maps/api/directions/json",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.98
+    },
+    {
+      "intent": "location.geocode",
+      "description": "주소를 위도/경도 좌표로 변환하거나 그 반대를 수행합니다.",
+      "endpoint": "https://maps.googleapis.com/maps/api/geocode/json",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.95
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "finance.billing", "criticality": "required" }
+  ]
 }

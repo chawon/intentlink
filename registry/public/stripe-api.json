@@ -2,26 +2,40 @@
   "id": "stripe-api",
   "protocol_version": "0.2.0",
   "identity": {
-    "name": "Stripe",
-    "purpose": "인터넷 비즈니스를 위한 온라인 결제 처리 인프라"
+    "name": "Stripe API",
+    "purpose": "전 세계 어디서나 결제를 수락하고 비즈니스를 관리할 수 있는 금융 인프라입니다."
   },
   "offers": [
     {
-      "intent": "finance.payment",
-      "description": "Stripe의 finance.payment 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "finance.payment.create",
+      "description": "결제 의도(PaymentIntent)를 생성하여 결제 프로세스를 시작합니다.",
+      "endpoint": "https://api.stripe.com/v1/payment_intents",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.98
     },
     {
-      "intent": "finance.subscription",
-      "description": "Stripe의 finance.subscription 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "finance.customer.create",
+      "description": "새로운 고객 객체를 생성합니다.",
+      "endpoint": "https://api.stripe.com/v1/customers",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.95
+    },
+    {
+      "intent": "finance.checkout.session",
+      "description": "Stripe가 호스팅하는 체크아웃 페이지 세션을 생성합니다.",
+      "endpoint": "https://api.stripe.com/v1/checkout/sessions",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "bearer",
+      "interaction_type": "api",
+      "confidence_score": 0.95
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "identity.merchant_account", "criticality": "required" }
+  ]
 }

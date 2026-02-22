@@ -2,26 +2,39 @@
   "id": "slack-api",
   "protocol_version": "0.2.0",
   "identity": {
-    "name": "Slack",
-    "purpose": "팀 협업 및 커뮤니케이션을 위한 메신저 플랫폼"
+    "name": "Slack API",
+    "purpose": "팀 커뮤니케이션 및 워크플로우 자동화를 위한 메시징 플랫폼입니다."
   },
   "offers": [
     {
-      "intent": "communication.message",
-      "description": "Slack의 communication.message 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "communication.message.send",
+      "description": "채널이나 사용자에게 메시지를 전송합니다.",
+      "endpoint": "https://slack.com/api/chat.postMessage",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.98
     },
     {
-      "intent": "communication.channel",
-      "description": "Slack의 communication.channel 기능",
-      "endpoint": "https://api.example.com/v1",
+      "intent": "communication.channel.list",
+      "description": "공개 채널 목록을 조회합니다.",
+      "endpoint": "https://slack.com/api/conversations.list",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "bearer",
+      "confidence_score": 0.95
+    },
+    {
+      "intent": "communication.file.upload",
+      "description": "Slack에 파일을 업로드하고 공유합니다.",
+      "endpoint": "https://slack.com/api/files.upload",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.9
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "identity.bot_scope", "criticality": "required" }
+  ]
 }

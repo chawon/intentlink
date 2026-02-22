@@ -2,26 +2,39 @@
   "id": "openai-api",
   "protocol_version": "0.2.0",
   "identity": {
-    "name": "OpenAI",
-    "purpose": "GPT 모델을 활용한 자연어 처리 및 이미지 생성 AI"
+    "name": "OpenAI API",
+    "purpose": "GPT-4 및 DALL-E 모델을 사용하여 자연어 처리, 이미지 생성, 임베딩 기능을 제공하는 AI 플랫폼입니다."
   },
   "offers": [
     {
       "intent": "ai.text_generation",
-      "description": "OpenAI의 ai.text_generation 기능",
-      "endpoint": "https://api.example.com/v1",
+      "description": "채팅 기반의 텍스트 생성 작업을 수행합니다.",
+      "endpoint": "https://api.openai.com/v1/chat/completions",
       "method": "POST",
-      "side_effect": "state-change",
-      "auth_type": "bearer"
+      "side_effect": "read-only",
+      "auth_type": "bearer",
+      "confidence_score": 0.95
     },
     {
       "intent": "ai.image_generation",
-      "description": "OpenAI의 ai.image_generation 기능",
-      "endpoint": "https://api.example.com/v1",
+      "description": "프롬프트를 기반으로 이미지를 생성합니다.",
+      "endpoint": "https://api.openai.com/v1/images/generations",
       "method": "POST",
       "side_effect": "state-change",
-      "auth_type": "bearer"
+      "auth_type": "bearer",
+      "confidence_score": 0.95
+    },
+    {
+      "intent": "ai.embeddings",
+      "description": "텍스트를 벡터로 변환하여 검색이나 유사도 분석에 사용합니다.",
+      "endpoint": "https://api.openai.com/v1/embeddings",
+      "method": "POST",
+      "side_effect": "read-only",
+      "auth_type": "bearer",
+      "confidence_score": 0.9
     }
   ],
-  "needs": []
+  "needs": [
+    { "intent": "finance.billing", "criticality": "required" }
+  ]
 }
