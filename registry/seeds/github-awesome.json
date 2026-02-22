@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Awesome API",
+    "url": "https://github.com/public-apis/public-apis",
+    "category": "General APIs"
+  },
+  {
+    "name": "Awesome AI Agents",
+    "url": "https://github.com/eugeneyan/open-llms",
+    "category": "AI/LLM"
+  },
+  {
+    "name": "Awesome Selfhosted",
+    "url": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "category": "Infrastructure"
+  }
+]

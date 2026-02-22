@@ -1,0 +1,25 @@
+{
+  "id": "openweather-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "OpenWeather 기상 플랫폼",
+    "purpose": "전 세계 실시간 기상 데이터와 정밀한 예보를 제공합니다."
+  },
+  "offers": [
+    {
+      "intent": "get_weather_data",
+      "description": "실시간 날씨 및 예보를 조회합니다.",
+      "endpoint": "/data/3.0/onecall",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "api_key",
+      "confidence_score": 0.95
+    }
+  ],
+  "needs": [
+    {
+      "intent": "location.coordinates",
+      "criticality": "required"
+    }
+  ]
+}

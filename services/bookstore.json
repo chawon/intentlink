@@ -1,0 +1,22 @@
+{
+  "id": "global-books",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "글로벌 북스토어",
+    "purpose": "희귀 도서를 전 세계에 판매합니다."
+  },
+  "offers": [
+    {
+      "intent": "search_book",
+      "description": "책 제목이나 ISBN으로 재고를 확인합니다.",
+      "endpoint": "/api/v1/search",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "none"
+    }
+  ],
+  "needs": [
+    { "intent": "logistics.shipping", "criticality": "required" },
+    { "intent": "track.package", "criticality": "optional", "mode": ["api", "ui-web"] }
+  ]
+}

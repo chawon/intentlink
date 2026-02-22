@@ -1,0 +1,21 @@
+{
+  "id": "github-api",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "GitHub Platform",
+    "purpose": "전 세계 소스 코드 호스팅 및 협업 개발 환경을 제공합니다."
+  },
+  "offers": [
+    {
+      "intent": "manage_repositories",
+      "description": "저장소를 생성하고 소스 코드를 관리합니다.",
+      "endpoint": "/user/repos",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "oauth2"
+    }
+  ],
+  "needs": [
+    { "intent": "user.account_id", "criticality": "required" }
+  ]
+}

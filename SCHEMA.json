@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Link Protocol Manifest Schema v0.2.0",
+  "type": "object",
+  "required": ["id", "identity", "offers"],
+  "properties": {
+    "id": { "type": "string" },
+    "protocol_version": { "type": "string", "enum": ["0.2.0"] },
+    "identity": {
+      "type": "object",
+      "required": ["name", "purpose"],
+      "properties": {
+        "name": { "type": "string" },
+        "purpose": { "type": "string" }
+      }
+    },
+    "offers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intent", "side_effect", "auth_type"],
+        "properties": {
+          "intent": { "type": "string" },
+          "description": { "type": "string" },
+          "endpoint": { "type": "string" },
+          "method": { "enum": ["GET", "POST", "PUT", "DELETE"] },
+          "side_effect": { "enum": ["read-only", "idempotent-write", "state-change"] },
+          "auth_type": { "enum": ["none", "bearer", "oauth2", "api_key"] },
+          "confidence_score": { "type": "number", "minimum": 0.0, "maximum": 1.0 }
+        }
+      }
+    },
+    "needs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["intent", "criticality"],
+        "properties": {
+          "intent": { "type": "string" },
+          "criticality": { "enum": ["required", "optional"] }
+        }
+      }
+    }
+  }
+}

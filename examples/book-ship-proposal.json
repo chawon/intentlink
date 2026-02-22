@@ -1,0 +1,33 @@
+{
+  "proposal_id": "c8e2a1b4-5f3d-4e9a-8b1c-7d6f5e4a3b2c",
+  "status": "matched",
+  "match_score": 0.92,
+  "summary": "글로벌 북스토어의 물류 요구 사항을 번개 배송의 자동화된 배송 의뢰 시스템과 연결",
+  "logic": {
+    "reason": "서점의 비즈니스 목적 달성을 위해 필수적인 배송 요구 사항이 배송사의 국제 물류 서비스와 일치합니다.",
+    "benefit": "운영 효율 극대화 및 수동 접수 제거"
+  },
+  "trust_and_safety": {
+    "risks": [
+      "배송비 결제 발생: API 호출 시 실제 비즈니스 비용이 청구될 수 있습니다.",
+      "물리적 데이터 일치 필요: 배송지 주소 오류 시 반송 비용 발생 위험"
+    ],
+    "assumptions": [
+      "api_key가 안전하게 환경 변수로 저장되어 있다고 가정",
+      "주소 데이터가 국제 표준 형식을 따름"
+    ],
+    "required_approvals": [
+      "최종 결제 금액 승인: 배송비 계산 후 최종 확인 절차 필요",
+      "개인정보 제3자 제공 동의: 주소 및 연락처 정보 제공 동의"
+    ]
+  },
+  "bridge": [
+    {
+      "source_need": "logistics.shipping",
+      "target_capability": "request_delivery",
+      "interaction_type": "REST",
+      "implementation_hint": "/api/v1/calc 호출 후 사용자 승인 획득, 그 다음 /api/v1/ship 호출",
+      "side_effect": "state-change"
+    }
+  ]
+}

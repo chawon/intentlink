@@ -1,0 +1,26 @@
+{
+  "id": "flash-ship",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "번개 배송 주식회사",
+    "purpose": "당일 배송 및 국제 물류 서비스를 제공합니다."
+  },
+  "offers": [
+    {
+      "intent": "request_delivery",
+      "description": "배송을 의뢰하고 송장을 발급합니다.",
+      "endpoint": "/api/v1/ship",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "api_key",
+      "interaction_type": "api"
+    },
+    {
+      "intent": "track_package_ui",
+      "description": "배송 상태를 시각적으로 확인하는 실시간 웹페이지입니다.",
+      "url": "https://flash-ship.com/track/{tracking_id}",
+      "interaction_type": "ui-web",
+      "auth_type": "none"
+    }
+  ]
+}

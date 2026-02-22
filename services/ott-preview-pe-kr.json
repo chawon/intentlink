@@ -1,0 +1,101 @@
+{
+  "id": "ott-preview-pe-kr",
+  "protocol_version": "0.2.0",
+  "identity": {
+    "name": "On the Timeline (preview)",
+    "purpose": "로그인 없이 영상·책 감상 기록을 남기고, 개인 타임라인과 공개 기록을 통해 회고·공유할 수 있게 합니다."
+  },
+  "offers": [
+    {
+      "intent": "create_watch_or_read_log",
+      "description": "영상/책 작품을 검색해 상태·평점·플랫폼·메모 등을 입력하고 기록을 저장합니다. UI 중심이며 익명 기기 식별자가 자동 발급될 수 있습니다.",
+      "endpoint": "/",
+      "interaction_type": "ui-web",
+      "side_effect": "state-change",
+      "auth_type": "none",
+      "confidence_score": 0.95
+    },
+    {
+      "intent": "view_personal_timeline",
+      "description": "내가 남긴 영상·책 기록을 시간순 타임라인으로 조회합니다.",
+      "endpoint": "/timeline",
+      "method": "GET",
+      "interaction_type": "ui-web",
+      "side_effect": "read-only",
+      "auth_type": "none",
+      "confidence_score": 0.94
+    },
+    {
+      "intent": "browse_public_logs_and_discussions",
+      "description": "공개로 남긴 기록과 함께 기록(토론) 목록을 조회합니다.",
+      "endpoint": "/public",
+      "method": "GET",
+      "interaction_type": "ui-web",
+      "side_effect": "read-only",
+      "auth_type": "none",
+      "confidence_score": 0.95
+    },
+    {
+      "intent": "register_anonymous_device_identity",
+      "description": "로그인 없이 사용하기 위한 익명 사용자/기기 식별자와 페어링 코드를 발급합니다.",
+      "endpoint": "/api/auth/register",
+      "method": "POST",
+      "side_effect": "state-change",
+      "auth_type": "none",
+      "confidence_score": 0.98
+    },
+    {
+      "intent": "fetch_recent_public_discussions",
+      "description": "홈/공개 영역에서 최근 공개 기록(함께 기록) 목록을 조회합니다.",
+      "endpoint": "/api/discussions/latest?limit=6&days=14",
+      "method": "GET",
+      "side_effect": "read-only",
+      "auth_type": "none",
+      "confidence_score": 0.9
+    },
+    {
+      "intent": "generate_share_card_image",
+      "description": "기록 내용을 SNS 공유용 이미지 카드로 렌더링/다운로드합니다.",
+      "endpoint": "/og/share-card",
+      "method": "POST",
+      "side_effect": "read-only",
+      "auth_type": "none",
+      "confidence_score": 0.96
+    },
+    {
+      "intent": "export_logs_csv",
+      "description": "설정 화면에서 내 기록을 CSV 파일로 내보냅니다 (FAQ/소개 문서 기준 확인).",
+      "endpoint": "/account",
+      "interaction_type": "ui-web",
+      "side_effect": "read-only",
+      "auth_type": "none",
+      "confidence_score": 0.85
+    }
+  ],
+  "needs": [
+    {
+      "intent": "browser.storage.indexeddb",
+      "criticality": "required"
+    },
+    {
+      "intent": "browser.storage.localstorage",
+      "criticality": "required"
+    },
+    {
+      "intent": "media.metadata.lookup",
+      "criticality": "required"
+    },
+    {
+      "intent": "media.poster.image_cdn",
+      "criticality": "required"
+    },
+    {
+      "intent": "book.metadata.lookup",
+      "criticality": "required"
+    },
+    {
+      "intent": "browser.webshare_api",
+      "criticality": "optional"
+    }
+  ]
+}
